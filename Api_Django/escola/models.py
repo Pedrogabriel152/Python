@@ -24,3 +24,14 @@ class Curso(models.Model):
     
     def __str__(self) -> str:
         return self.descricao
+
+class Matricula(models.Model):
+    PERIODO = (
+        ('M', 'Matutino'),
+        ('V', 'Vespertino'),
+        ('N', 'Noturno')
+    )
+    id_aluno = models.ForeignKey(Aluno, on_delete=models.CASCADE)
+    id_curso = models.ForeignKey(Curso, on_delete=models.CASCADE)
+    periodo = models.CharField(max_length=1, choices=PERIODO, blank=False, null=False, default='M')
+    
