@@ -14,9 +14,9 @@ class Cursos(admin.ModelAdmin):
     list_per_page = 20
     
 class Matriculas(admin.ModelAdmin):
-    list_display = ('id', 'id_curso', 'id_aluno', 'periodo')
-    list_display_links = ('id', 'id_curso', 'id_aluno', 'periodo')
-    search_fields = ('id', 'id_curso', 'id_aluno', 'periodo')
+    list_display = ('id', 'curso', 'aluno', 'periodo')
+    list_display_links = ('id', 'curso', 'aluno', 'periodo')
+    search_fields = ('id', 'curso', 'aluno', 'periodo')
     list_per_page = 20
 
 admin.site.register(Aluno, Alunos)
