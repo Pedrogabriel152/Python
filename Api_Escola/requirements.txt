@@ -25,4 +25,5 @@ toml==0.10.2
 tomlkit==0.12.1
 typed-ast==1.5.5
 urllib3==2.0.6
+validate-docbr==1.10.0
 wrapt==1.15.0
